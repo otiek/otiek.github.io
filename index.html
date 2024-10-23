@@ -21,7 +21,6 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
-
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -39,8 +38,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <link rel="stylesheet" href="./static/css/dics.original.css">
-  <script src="./static/js/dics.original.js"></script>
+  <!-- for image slider -->
+  <link rel="stylesheet" href="./css/dics.min.css">
+  <script src="./js/dics.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', domReady);
+        function domReady() {
+            for (const e of document.querySelectorAll(".b-dics")) {
+                new Dics({
+                    container: e,
+                    textPosition: "top"
+                });
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -220,11 +231,11 @@
             <div class="column">
                 <div class="content">
                     <h2 class="title is-3">Reconstruction Results</h2>
-                    <div class="b-dics" style="width: 400px">
-                        <img src="http://codictados.com/wp-content/uploads/2017/01/01.jpg" alt="Japan" />
-                        <img src="http://codictados.com/wp-content/uploads/2017/01/02.jpg" alt="Japan Yellow" />
-                        <img src="http://codictados.com/wp-content/uploads/2017/01/03.jpg" alt="Japan Orange" />
-                        <img src="http://codictados.com/wp-content/uploads/2017/01/04.jpg" alt="Japan Black &amp; White" />
+                    <div class="col-md-4">
+                        <div class="b-dics" style="width:50%;">
+                            <img src="./static/demo/01.jpg" alt="Japan" />
+                            <img src="./static/demo/02.jpg" alt="Japan Yellow" />
+                        </div>
                     </div>
                 </div>
             </div>
